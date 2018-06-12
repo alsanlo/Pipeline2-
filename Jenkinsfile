@@ -4,7 +4,8 @@ pipeline {
     stage('Primer paso') {
       steps {
         echo 'Primer paso'
-        jiraComment(issueKey: 'SCRUM-1', body: 'Este es un comentario añadido desde Jenkins')
+        jiraComment(issueKey: 'SCRUM-1', body: 'Este es un comentario aÃ±adido desde Jenkins')
+        jiraSearch 'project = \'SCRUM\''
       }
     }
     stage('Pasos Paralelos') {
